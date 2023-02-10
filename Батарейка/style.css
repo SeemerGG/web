@@ -1,0 +1,61 @@
+#container
+{
+    display: flex;
+}
+
+.main
+{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.chare
+{
+    width: 25px;
+    height: 50px;
+    background: red;
+
+}
+
+.batareyka
+{
+    width: 100px;
+    height: 50px;
+    border: 5px solid #000000;
+    margin: 45px;
+}
+
+.batareyka2
+{
+    width: 100px;
+    height: 50px;
+    margin: 45px;
+    border: 5px solid #000000;
+    justify-content: start;
+}
+
+.batareyka3
+{
+    width: 100px;
+    height: 50px;
+    border: 5px solid #000000;
+    margin: 45px;
+}
+
+.chare1
+{
+    width: 50px;
+    height: 50px;
+    background: yellow;
+}
+
+.chare2
+{
+    width: 75px;
+    height: 50px;
+    background: green;
+}
+
