@@ -1,0 +1,63 @@
+:root
+{
+    --container-widht: 1140px;
+    --container-pading: 60px;
+}
+.main
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    max-width: var(--container-widht);
+    margin: 0 auto;
+    background: white;
+    position: relative;
+}
+
+.base_class1
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100vh;
+    height: 800px;
+    flex-wrap: wrap;
+    margin: auto;
+    max-width: 1140px;
+    position: relative;
+}
+
+.orng_block
+{
+    background: orangered;
+    width: 50%;
+    height: 35%;
+    position: absolute;
+    right: -10%;
+
+}
+.pic1
+{
+    display: flex;
+    width: 55%;
+    height: 90%;
+    background: aqua;
+    position: relative;
+    flex-wrap: wrap;
+    right: 120px;
+    top: 50px;
+    z-index: 1;
+}
+.text1
+{
+    width: 425px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 1;
+    float: left;
+}
