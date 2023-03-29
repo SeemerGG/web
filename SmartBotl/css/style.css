@@ -4,35 +4,131 @@
     --org-figur-width: 490px;
     --org-figur-height: 400px;
 }
-.main{
+
+
+.wrapen{
     background: white;
-    margin: 0;
-}
-body{
-    margin: 0;
-}
-.container {
-    display: flex;
-    width: 100vw;
-    height: 800px;
-    background: red;
-    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    #grid-template-rows: repeat(4, minmax(150px, 1fr));
+    #grid-gap: 1em;
+    justify-content: stretch;
+    align-items: stretch;
 }
 
-.org_block{
-    display: flex;
-
-    flex-direction: row;
-    align-content: center;
-    justify-content: flex-end;
-    position: absolute;
-    background: black;
-    #z-index: 2;
+.block2{
+    background: orangered;
+    min-width: 244px;
+    max-width: 490px;
+    height: 490px;
 }
 
-.org_figure{
-    z-index: 4;
-    width: var(--container-widht);
-    height: var(--org-figur-height);
-    color: blue;
+.block1 {
+    background: blueviolet;
+    min-width: 120px;
+    height: 100%;
+}
+
+
+.block3{
+
+    background: blue;
+    height: 600px;
+    width: 600px;
+}
+
+.block4{
+    background: aquamarine;
+    justify-self: stretch;
+    min-height: 441px;
+    min-width: 100px;
+    max-height: 720px;
+    max-width: 628px;
+    right: 50px;
+}
+/*Второй блок*/
+.BigBlock2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.pic2{
+    background: url("../images/бутылки2.jpg") center/cover;
+    width: 400px;
+
+}
+.textBlock2{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: auto auto;
+}
+.line{
+    width: 5px;
+    height: auto;
+    background: orangered;
+}
+
+/* Третий блок */
+.BigBlock3{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    padding: 60px;
+}
+.miniblock{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+}
+
+.button{
+    background-color: #ff5126;
+    color: #ffffff;
+    position: relative;
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin: 30px auto 40px 0;
+    font-family: 'Source Sans Pro', sans-serif !important;
+    line-height: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    text-decoration: none;
+    border: 0 none transparent;
+    outline-width: 0;
+    font-style: initial;
+    white-space: nowrap;
+    user-select: none;
+    vertical-align: middle;
+    text-align: center;
+    padding: 10px 30px;
+    border-radius: 0;
+}
+.pic1{
+    grid-column: 2/3;
+    grid-row: 1/3;
+    background: url("../images/бутылкаблок3.png") center/cover;
+    width: 50vw;
+
+}
+h2{
+    font-family: 'Source Sans Pro', sans-serif !important;
+    font-weight: 1000;
+    font-size: 2.25em;
+}
+h1{
+    font-family: 'Source Sans Pro', sans-serif !important;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: 700;
+}
+
+p{
+    font-family: 'Source Sans Pro', sans-serif !important;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 540;
+    font-weight: 547;
 }
