@@ -5,17 +5,47 @@
     --org-figur-height: 400px;
     --content-wight: 1140px;
 }
+/*770px width*/
+/*body{*/
+/*    display: flex;*/
+/*    max-width: 1140px;*/
+/*    min-width: 100px;*/
+/*    flex-direction: column;*/
+/*    justify-content: center;*/
+/*    padding: 0 5vw 0 5vw;*/
+/*    height: auto;*/
+/*}*/
+/*body{*/
+/*    */
+/*    max-width: 1140px;*/
+/*    min-width: 770px;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-self: center;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    padding: 0 5vw 0 5vw;*/
+/*    height: auto;*/
+/*}*/
 
 body{
-    display: flex;
     max-width: 1140px;
-    min-width: 100px;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 0 calc((100vw - 1140px)/2) calc((100vw - 1140px)/2);
-    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10vw 0 10vw;
 }
+.main{
 
+    min-width: 770px;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    #padding: 0 10vw 0 10vw;
+}
 /*Первый блок*/
 .BigBlock1{
     display: grid;
@@ -26,27 +56,33 @@ body{
 
 .orgBlock{
     background: orangered;
-    width: 490px;
-    height: 400px;
+    width: 40vw;
+    height: auto;
+    max-width: 490px;
+    max-height: 400px;
+    min-width: 244px;
+    min-height: 400px;
     grid-column: 2/3;
     justify-self: end;
 }
 .textBlock1{
     display: flex;
     flex-direction: column;
+    grid-row: 1/3;
     grid-column: 1/2;
-    margin-top: -50%;
+    margin-top: 30%;
 }
 
 .picBlock1{
     background: url("../images/бутылочкиМнога.jpeg") center/cover;
+    align-items: start;
     max-width: 630px;
+    max-height: 720px;
     height: auto;
     grid-column: 2/3;
     grid-row: 2/3;
     z-index: 3;
-    margin-top: -50%;
-    margin-left: 5%;
+    margin: -350px 10% 0 10%;
 }
 
 /*Второй блок*/
@@ -60,11 +96,7 @@ body{
 .block1InBigBlock2{
     background: #F2F2F2;
 }
-.pic2{
-    background-color: #e5d7ba;
-    margin: -100px 100px 0 40%;
 
-}
 .pic2{
     background: url("../images/бутылкаСиния.jpeg") center/cover;
     width: 50%;
@@ -73,6 +105,7 @@ body{
     z-index: 4;
     max-height: 440px;
     min-width: 210px;
+    margin: -100px 100px 0 40%;
 }
 .textBlock2{
     display: grid;
@@ -95,21 +128,28 @@ body{
 }
 .miniblock{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1/2;
+    grid-row:2/3;
     grid-gap: 10px;
     background: #F2F2F2;
 }
-.blockforh2block3{
+
+
+.blockform2block3{
     background: #F2F2F2;
+    grid-row: 1/2;
+    grid-column: 1/2;
 }
 .button{
     background-color: #ff5126;
     color: #ffffff;
-    max-width: 130px;
+    max-width: 70px;
     position: relative;
     font-size: 0.875rem;
     font-weight: 700;
-    margin: 30px auto 40px 0;
+    margin: 40px 20px 0 20px;
+    #margin: 30px auto 40px 0;
     font-family: 'Source Sans Pro', sans-serif !important;
     line-height: inherit;
     letter-spacing: inherit;
@@ -124,23 +164,21 @@ body{
     text-align: center;
     padding: 10px 30px;
     border-radius: 0;
-    margin: 0 20px;
+
 }
-.pic1{
+.pic3{
     grid-column: 2/3;
     grid-row: 1/3;
-    background: url("../images/бутылкаблок3.png") center/cover;
-    min-width: 340px;
+    background: url("../images/бутылканарыжем.jpg") center/cover;
     max-width: 526px;
-    max-height: 622px;
-    height: 622px;
+    height: auto;
 }
 
 /*Блок 4*/
 .BigBlock4{
     display: grid;
-    grid-template-columns: repeat(2, minmax(150px, 1fr));
-    grid-template-rows: repeat(2, minmax(150px, 1fr));
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
     margin: 0 0 30px 0;
     grid-column-gap: 50px;
 }
@@ -153,18 +191,93 @@ body{
 }
 
 .orgBlock2{
+    z-index: -1;
     background: orangered;
-    grid-column: 1/3;
+    grid-column: 1/2;
     grid-row: 2/3;
-    margin-top: -10%;
-    height: 385px;
-    width: 570px;
+    width: 100%;
+    min-height: 340px;
+    margin: -50% 0 0 0;
+    /*height: 385px;*/
+    /*width: 570px;*/
 }
 
 .pic4{
-    background: orange;
-    width: 100px;
+    background: url("../images/бутылкаителефон.jpeg") center/cover;
+    min-height: 480px;
+    width: 90%;
+    justify-self: end;
+    margin: 0 5% 0 0;
 }
+
+/*Блок пятый*/
+.BigBlock5{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-column-gap: 50px;
+    margin: 0 0 30px 0;
+}
+
+.blockFromBigBlock5{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+blockquote{
+    border-left: 5px solid orangered;
+    max-height: 170px;
+}
+
+.block2FromBlock5{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.pic5{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    background: url("../images/бутылкабелая.jpg") center/cover;
+    margin: -15% 0 0 20%;
+}
+
+.block3FromBlock5{
+    background: #F2F2F2;
+}
+.video1{
+    grid-column: 1/3;
+    grid-row: 3/4;
+    width: 45vw;
+    height: 500px;
+    justify-self: center;
+    margin: 30px 0 50px 0;
+    align-self: end;
+    z-index: 5;
+}
+.h2FromBigBlock5{
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+.figuraGray2{
+    background: #F2F2F2;
+    grid-column: 2/3;
+    grid-row: 3/6;
+}
+
+.block4FromBigBlock5{
+    grid-column: 1/2;
+    grid-row: 5/6;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.pic5\.1{
+    grid-column: 2/3;
+    grid-row: 5/6;
+    background: url("../images/стаканчик.jpeg") center/cover;
+    height: auto;
+    max-height: 480px;
+    margin: 0 50px 0 50px;
+}
+
 h2{
     margin: 20px 15px 0 15px;
     font-family: 'Source Sans Pro', sans-serif !important;
@@ -174,10 +287,12 @@ h2{
 h1{
 
     font-family: 'Source Sans Pro', sans-serif !important;
-    font-size: 2em;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 0px;
+    font-size: 3em;
+    margin: 20px 20px 0 20px;
+    line-height: 1.1;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 20px;
     margin-inline-end: 0px;
     font-weight: 700;
 }
