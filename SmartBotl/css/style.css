@@ -305,3 +305,284 @@ p{
     font-weight: 540;
     font-weight: 547;
 }
+
+@media only screen and (min-width: 320px) and (max-width: 875px){
+    body{
+        width: auto;
+        height: auto;
+        padding: 0 10vw 0 10vw;
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+    .main{
+        min-width: auto;
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        justify-self: center;
+    }
+
+    /*Первый блок*/
+    .BigBlock1{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,  1fr);
+        margin-bottom: 30px;
+    }
+
+    .orgBlock{
+        background: orangered;
+        width: 40%;
+        height: auto;
+        max-width: 490px;
+        max-height: 400px;
+        min-width: 244px;
+        min-height: 400px;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        justify-self: end;
+    }
+    .textBlock1{
+        display: flex;
+        flex-direction: column;
+        grid-row: 2/3;
+        grid-column: 1/2;
+        margin-top: 0;
+    }
+
+    .picBlock1{
+        background: url("../images/бутылочкиМнога.jpeg") center/cover;
+        align-items: start;
+        max-width: 630px;
+        max-height: 720px;
+        height: auto;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        z-index: 3;
+        margin: 10% 10% 0 10%;
+    }
+
+    /*Второй блок*/
+    .BigBlock2{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        margin: 0 0 30px 0;
+        z-index: 4;
+    }
+    .block1InBigBlock2{
+        background: #F2F2F2;
+        grid-row:1/2;
+        grid-column: 1/2;
+        width: 70%;
+        justify-self: center;
+    }
+
+    .pic2{
+        background: url("../images/бутылкаСиния.jpeg") center/cover;
+        width: auto;
+        height: 480px;
+        z-index: 10;
+        max-height: 440px;
+        min-width: 210px;
+        #margin: 0 0 0 0;
+    }
+    .textBlock2{
+        display: grid;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        grid-gap: 10px;
+        grid-template-columns: auto auto;
+    }
+    .line{
+        width: 5px;
+        height: auto;
+        background: orangered;
+    }
+
+    /* Третий блок */
+    .BigBlock3{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        margin: 0 0 30px 0;
+    }
+
+    .blockform2block3{
+        background: #F2F2F2;
+        grid-row: 1/2;
+        grid-column: 1/2;
+        width: auto;
+        height: auto;
+    }
+
+    .miniblock{
+        grid-column: 1/2;
+        grid-row:2/3;
+        display: flex;
+        gap: 0;
+        background: #F2F2F2;
+        flex-direction: column;
+        align-content: center;
+        height: auto;
+    }
+
+    .pic3{
+        grid-column: 1/2;
+        grid-row: 3/4;
+        background: url("../images/бутылканарыжем.jpg") center/cover;
+        max-width: 526px;
+        min-width: 50%;
+        height: 500px;
+        margin-top: 30px;
+        justify-self: center;
+    }
+
+    .button{
+        top: -10px;
+        background-color: #ff5126;
+        color: #ffffff;
+        max-width: 70px;
+        position: relative;
+        font-size: 0.875rem;
+        font-weight: 700;
+        margin: 0 20px 0 20px;
+        /*отступа не было*/
+        #margin: 30px auto 40px 0;
+        font-family: 'Source Sans Pro', sans-serif !important;
+        line-height: inherit;
+        letter-spacing: inherit;
+        text-transform: inherit;
+        text-decoration: none;
+        border: 0 none transparent;
+        outline-width: 0;
+        font-style: initial;
+        white-space: nowrap;
+        user-select: none;
+
+        text-align: center;
+        padding: 10px 30px;
+        border-radius: 0;
+
+    }
+
+    /*Блок 4*/
+    .BigBlock4{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        margin: 0 0 30px 0;
+    }
+
+    .orgBlock2{
+        z-index: -1;
+        background: orangered;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        width: 70%;
+        height: 50%;
+        margin: 0 0 -3% 0;
+        justify-self: center;
+        align-self: end;
+        /*height: 385px;*/
+        /*width: 570px;*/
+    }
+
+    .pic4{
+        background: url("../images/бутылкаителефон.jpeg") center/cover;
+        width: 50%;
+        margin: 0 0 0 0;
+        grid-row: 1/2;
+        grid-column: 1/2;
+        align-self: end;
+        justify-self: center;
+    }
+    .textBlock4{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    /*Блок пятый*/
+    .BigBlock5{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto auto auto auto;
+        margin: 0 0 30px 0;
+    }
+
+    .blockFromBigBlock5{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    blockquote{
+        border-left: 5px solid orangered;
+        max-height: 170px;
+    }
+
+    .pic5{
+        grid-column: 1/2;
+        grid-row: 3/4;
+        background: url("../images/бутылкабелая.jpg") center/cover;
+        width: 50vw;
+        height: 50vw;
+        justify-self: center;
+        margin: 0 0 0 0;
+    }
+
+    .block2FromBlock5{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .block3FromBlock5{
+        background: #F2F2F2;
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+    .video1{
+        grid-column: 1/2;
+        grid-row: 5/6;
+        width: 45vw;
+        height: 500px;
+        justify-self: center;
+        margin: 30px 0 50px 0;
+        align-self: end;
+        z-index: 5;
+    }
+    .h2FromBigBlock5{
+        background: #F2F2F2;
+        width: 100%;
+        grid-column: 1/2;
+        grid-row: 6/7;
+        margin: 0 0 0 0;
+    }
+    .figuraGray2{
+        background: #F2F2F2;
+        grid-column: 1/2;
+        grid-row: 5/6;
+    }
+
+    .block4FromBigBlock5{
+        background: #F2F2F2;
+        grid-column: 1/2;
+        grid-row: 7/8;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .pic5\.1{
+        grid-column: 1/2;
+        grid-row: 8/9;
+        background: url("../images/стаканчик.jpeg") center/cover;
+        height: 300px;
+        width: 50vw;
+        margin: 0 0 0 0;
+        justify-self: center;
+    }
+}
