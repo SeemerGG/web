@@ -1,8 +1,7 @@
 .main{
-    justify-content: center;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    flex-direction: column;
     padding: 0 10vw 0 10vw;
 }
 
@@ -15,6 +14,11 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     grid-column-gap: 50px;
+}
+.blockWithBlocks{
+    display: flex;
+    flex-direction: column;
+    margin: -30px 0 0 0;
 }
 .contact{
     display: inline-block;
@@ -35,7 +39,6 @@
     align-self: end;
     justify-self: end;
 }
-
 
 .figureBlue{
     background: blue;
@@ -60,6 +63,7 @@
     text-align: left;
     padding: 10px 0 10px 0;
     word-wrap: break-word;
+    color: darkgray;
 }
 
 .h1Main{
@@ -80,6 +84,7 @@
     outline: none;
     font-size: 16px;
     font-family: "Open Sans", sans-serif;
+    margin: 30px 0 0 0;
 }
 
 .active,
@@ -103,6 +108,9 @@
     align-self: end;
 }
 
+#countChildEl{
+    text-align: center;
+}
 
 h1{
     font-family: Ubuntu, sans-serif !important;
@@ -112,6 +120,13 @@ h1{
 p{
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
-    color: darkgray;
+    color: white;
 }
 
+/*Task 4*/
+#editObjects{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+
+}
