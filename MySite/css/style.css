@@ -99,6 +99,8 @@
     color: white;
     text-align: end;
     padding: 25px;
+    justify-self: end;
+    align-self: end;
 }
 
 
