@@ -14,6 +14,7 @@ function launchButton() {
         )
     }
 }
+
 //Task 1
 function launchDataTime() {
     const currentDate = new Date();
@@ -117,10 +118,84 @@ function calendar(id, year, month) {
 
 //Task 5
 
-function createLi(){
-    const  str = prompt('Имя пункта:').trim();
-    const list = document.getElementById('list');
-    list.insertAdjacentHTML('beforeend', '<li></li>')
+function Task5(){
+    let li = document.querySelectorAll('li')
+    li.forEach(item => {
+        item.addEventListener('click', clickHandler)
+    })
+}
+function clickHandler(e) {
+
+    if(e.target.classList.contains('class-li')) {
+        console.log('нажали на li')
+    }
+    let next = e.target.nextElementSibling
+    let pred = e.target.previousElementSibling
+    console.log(e.target.innerHTML)
+    if(next != null)
+    {
+        [e.target.innerHTML, next.innerHTML] = [next.innerHTML, e.target.innerHTML]
+    }
+    else
+    {
+        [e.target.innerHTML, pred.innerHTML] = [pred.innerHTML, e.target.innerHTML]
+    }
+}
+//Task 6
+function fillTable(){
+    let table = document.getElementById("task6");
+    for (let row of table.rows)
+    {
+        for(let cell of row.cells)
+        {
+            cell.appendChild(createCrabik());
+        }
+    }
+}
+
+function createCrabik(){
+    const image = document.createElement('img');
+    image.src = "../images/крабик.png";
+    image.style.height = 50 + 'px';
+    image.style.width = 50 + 'px';
+    image.style.visibility = 'hidden'
+    return image;
+}
+
+function Task6(){
+    let table =  document.getElementById('task6');
+    for (let row of table.rows)
+    {
+        for(let cell of row.cells)
+        {
+            cell.addEventListener('click', clickHandlerTable);
+        }
+    }
+}
+
+function clickHandlerTable(e){
+    e.target.firstElementChild.style.visibility = 'visible';
+}
+
+function Task7(){
+    let el = document.getElementById('task7');
+    el.addEventListener('click', clickHandlerForTask7);
+}
+
+function clickHandlerForTask7(e){
+    if(e.target.childElementCount == 3){
+
+    }
+    if(e.target.childElementCount == 2){
+        let p = document.createElement('p');
+        p.innerHTML = "Пироженное"
+        e.target.appendChild(p);
+        let el = document.getElementById('task7');
+        el.style.maxHeight = el.scrollHeight + 'px';
+    }
+    
+
+    console.log(e.target.parentElement.innerHTML);
 }
 
 window.onload = () => {
@@ -143,7 +218,10 @@ window.onload = () => {
     }
 
     //В разработке
-    document.getElementById('addEll').onclick = createLi;
+    Task5();
+    fillTable();
+    Task6();
+    Task7();
     //
 
 
