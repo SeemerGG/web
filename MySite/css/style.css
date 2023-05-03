@@ -175,3 +175,62 @@ p{
     height: 250px;
     width: 250px;
 }
+
+#sweets{
+    display: block;
+    opacity: 1;
+    transition: opacity 1s;
+}
+#sweets.fade{
+    opacity:0;
+}
+
+#pie{
+    display: block;
+    opacity: 1;
+    transition: opacity 1s;
+}
+#pie.fade{
+    opacity: 0;
+}
+#med{
+    display: block;
+    opacity: 1;
+    transition: opacity 1s;
+
+}
+#med.fade{
+    opacity: 0;
+}
+#end{
+    display: none;
+}
+
+#task8p{
+    position: absolute;
+}
+
+#task8{
+    background-image: url("../images/semejnoe.jpg");
+    background-repeat: no-repeat;
+}
+
+#blago{
+    opacity: 1;
+    transition: opacity 1s;
+}
+#blago.fade{
+    opacity: 0;
+}
+
+#task9{
+    color: white;
+}
+
+input:invalid {
+    border: 2px dashed red;
+}
+
+input:valid {
+    border: 2px solid black;
+}

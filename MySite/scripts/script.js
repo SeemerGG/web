@@ -14,7 +14,16 @@ function launchButton() {
         )
     }
 }
-
+function buttonUpdate() {
+    //this.classList.toggle('active');
+    let content = this.nextElementSibling;
+    if(content.style.maxHeight) {
+        content.style.maxHeight = null;
+    }
+    else {
+        content.style.maxHeight = content.scrollHeight + 'px';
+    }
+}
 //Task 1
 function launchDataTime() {
     const currentDate = new Date();
@@ -176,28 +185,55 @@ function Task6(){
 function clickHandlerTable(e){
     e.target.firstElementChild.style.visibility = 'visible';
 }
-
+//task7
 function Task7(){
-    let el = document.getElementById('task7');
-    el.addEventListener('click', clickHandlerForTask7);
+    document.getElementById('task7').addEventListener('click', clickHandlerForTask7)
 }
 
-function clickHandlerForTask7(e){
-    if(e.target.childElementCount == 3){
-
+let countClick = 1;
+function clickHandlerForTask7(){
+    let content = document.getElementById('task7');
+    switch (countClick){
+        case 1:
+            let sweets = document.getElementById('sweets');
+            sweets.classList.toggle('fade');
+            setTimeout(() => {
+                sweets.style.display = 'none';
+                content.style.maxHeight = content.scrollHeight + 'px';
+            }, 1000);
+            countClick++;
+            break
+        case 2:
+            let med = document.getElementById('med');
+            med.classList.toggle('fade');
+            setTimeout(() => {
+                med.style.display = 'none';
+                content.style.maxHeight = content.scrollHeight + 'px';
+            }, 1000);
+            countClick++;
+            break
+        case 3:
+            let pie = document.getElementById('pie');
+            pie.classList.toggle('fade');
+            setTimeout(() => {
+                pie.style.display = 'none';
+                document.getElementById('end').style.display = 'block';
+                content.style.maxHeight = content.scrollHeight + 'px';
+            }, 1000);
+            countClick++;
+            break
+        default:
+            break
     }
-    if(e.target.childElementCount == 2){
-        let p = document.createElement('p');
-        p.innerHTML = "Пироженное"
-        e.target.appendChild(p);
-        let el = document.getElementById('task7');
-        el.style.maxHeight = el.scrollHeight + 'px';
-    }
+}
+//task8
+function Task8(e){
+    e.target.classList.toggle('fade');
+}
+//Task9
+function Task9(){
     
-
-    console.log(e.target.parentElement.innerHTML);
 }
-
 window.onload = () => {
     launchButton();
     launchDataTime();
@@ -206,7 +242,6 @@ window.onload = () => {
     createSquares(4, 'editObjects');
     setInterval(() => {hideRandomObject('editObjects')}, 120);
     setInterval(() => {showAllObject('editObjects')}, 240);
-
     calendar("calendar", new Date().getFullYear(), new Date().getMonth());
 // переключатель минус месяц
     document.querySelector('#calendar thead tr:nth-child(1) td:nth-child(1)').onclick = function() {
@@ -216,13 +251,11 @@ window.onload = () => {
     document.querySelector('#calendar thead tr:nth-child(1) td:nth-child(3)').onclick = function() {
         calendar("calendar", document.querySelector('#calendar thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar thead td:nth-child(2)').dataset.month) + 1);
     }
-
-    //В разработке
     Task5();
     fillTable();
     Task6();
     Task7();
-    //
-
-
+    //Task 8
+    document.getElementById('blago').addEventListener('mouseover', Task8);
+    document.getElementById('blago').addEventListener('mouseout', Task8);
 }
