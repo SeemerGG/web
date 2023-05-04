@@ -234,6 +234,12 @@ function Task8(e){
 function Task9(){
     
 }
+
+function Complete(){
+    console.log("lsakjdf");
+    let regEmail = new RegExp('/^\\S+@\\S+\\.\\S+$/');
+    let regName = new RegExp('^^[а-яА-ЯёЁ]+$')
+}
 window.onload = () => {
     launchButton();
     launchDataTime();
@@ -258,4 +264,6 @@ window.onload = () => {
     //Task 8
     document.getElementById('blago').addEventListener('mouseover', Task8);
     document.getElementById('blago').addEventListener('mouseout', Task8);
+
+
 }
