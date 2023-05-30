@@ -190,41 +190,22 @@ function Task7(){
     document.getElementById('task7').addEventListener('click', clickHandlerForTask7)
 }
 
-let countClick = 1;
-function clickHandlerForTask7(){
+let countClick = 0;
+function clickHandlerForTask7(e){
     let content = document.getElementById('task7');
-    switch (countClick){
-        case 1:
-            let sweets = document.getElementById('sweets');
-            sweets.classList.toggle('fade');
-            setTimeout(() => {
-                sweets.style.display = 'none';
-                content.style.maxHeight = content.scrollHeight + 'px';
-            }, 1000);
-            countClick++;
-            break
-        case 2:
-            let med = document.getElementById('med');
-            med.classList.toggle('fade');
-            setTimeout(() => {
-                med.style.display = 'none';
-                content.style.maxHeight = content.scrollHeight + 'px';
-            }, 1000);
-            countClick++;
-            break
-        case 3:
-            let pie = document.getElementById('pie');
-            pie.classList.toggle('fade');
-            setTimeout(() => {
-                pie.style.display = 'none';
-                document.getElementById('end').style.display = 'block';
-                content.style.maxHeight = content.scrollHeight + 'px';
-            }, 1000);
-            countClick++;
-            break
-        default:
-            break
+    let sweets = e.target;
+    if(sweets.id != "task7p"){
+        sweets.classList.toggle('fade');
+        setTimeout(() => {
+            sweets.style.display = 'none';
+            content.style.maxHeight = content.scrollHeight + 'px';
+        }, 1000);
+        countClick++;
     }
+    if(countClick == 3){
+        document.getElementById("end").style.display = "block";
+    }
+
 }
 //task8
 function Task8(e){
@@ -240,7 +221,23 @@ function Complete(){
     let regEmail = new RegExp('/^\\S+@\\S+\\.\\S+$/');
     let regName = new RegExp('^^[а-яА-ЯёЁ]+$')
 }
+//
+function clickHandlerFortask7p(){
+
+}
+
+function task4_from_zachet(id_parent){
+    let parent = document.getElementById(id_parent)
+    let text = parent.innerHTML
+    console.log(text)
+    let children = document.createElement('div')
+    children.innerHTML = text
+    parent.appendChild(children)
+    //parent.push(children)
+}
+
 window.onload = () => {
+    task4_from_zachet('one')
     launchButton();
     launchDataTime();
     setInterval(launchDataTime, 1000);
@@ -263,7 +260,8 @@ window.onload = () => {
     Task7();
     //Task 8
     document.getElementById('blago').addEventListener('mouseover', Task8);
-    document.getElementById('blago').addEventListener('mouseout', Task8);
+   // document.getElementById('blago').addEventListener('mouseout', Task8);
+    // Task 7
 
 
 }
